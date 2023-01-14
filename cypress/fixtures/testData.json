@@ -1,5 +1,18 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "landingPage": {
+    "cartLink": "https://magento.softwaretestingboard.com/checkout/cart/",
+    "homeLink": "https://magento.softwaretestingboard.com/",
+    "signUpLink": "https://magento.softwaretestingboard.com/customer/account/create/",
+    "signInLink": "https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/",
+    "aboutUsLink":"https://magento.softwaretestingboard.com/about-us",
+    "customerServiceLink": "https://magento.softwaretestingboard.com/customer-service",
+    "ordersReturnsLink": "https://magento.softwaretestingboard.com/sales/guest/form/",
+    "searchTermsLink": "https://magento.softwaretestingboard.com/search/term/popular/",
+    "privacyPolicyLink": "https://magento.softwaretestingboard.com/privacy-policy-cookie-restriction-mode/",
+    "advancedSearchLink": "https://magento.softwaretestingboard.com/catalogsearch/advanced/"
+  },
+  "customerCredentials": {
+    "email": "roni_cost@example.com",
+    "password": "roni_cost3@example.com"
+  }
 }
