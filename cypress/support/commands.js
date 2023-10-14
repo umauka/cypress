@@ -24,6 +24,6 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('openUrl', ()=>{
-    cy.visit('https://magento.softwaretestingboard.com/')
+Cypress.Commands.add('openBaseUrl', ()=>{
+    cy.visit('/')
 })

@@ -6,11 +6,11 @@
   "scripts": {
     "test": "npx cypress run --record --key 8d010121-f5c9-4268-a1f3-559d306e2295"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "cypress": "10.3.0",
+  "dependencies": {
+    "cypress": "^13.3.1",
     "cypress-localstorage-commands": "^2.2.2"
   }
 }
