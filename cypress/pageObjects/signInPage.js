@@ -63,7 +63,10 @@ class SignInPage{
         return cy.get('#pass')
     }
     getSignInBtn(){
-        return cy.get('#send2 > span')
+        return cy.get('#send2')
+    }
+    getErrMessage(){
+        return cy.get('div.message-error.error.message')
     }
 }
 export default SignInPage;

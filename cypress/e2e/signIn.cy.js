@@ -14,10 +14,11 @@ const privacyPolicyLink = data.landingPage.privacyPolicyLink
 const advancedSearchLink = data.landingPage.advancedSearchLink
 const email = data.customerCredentials.email
 const password = data.customerCredentials.password
+const signInErrMessage = data.signIn.err
 
 describe('Sign In Module', () => {
   beforeEach('', ()=>{
-    cy.openUrl()
+    cy.openBaseUrl()
   })
   afterEach('', ()=>{
   })
@@ -42,13 +43,14 @@ describe('Sign In Module', () => {
     signInPage.getPrivacyPolicy().should('be.visible').and('contain.text', "Privacy and Cookie Policy").and('have.attr', 'href', privacyPolicyLink)
     signInPage.getAdvancedSearch().should('be.visible').and('contain.text', "Advanced Search").and('have.attr', 'href', advancedSearchLink)
   })
-  it('To verify that user can Log in/Sign In', () => {
+  it.only('To verify that user cannot Log in with a disabled account', () => {
     signInPage.getSignIn().scrollIntoView().click()
     cy.url().should('equal', signInLink)
     signInPage.getSignInHeader().should('be.visible').and('contain.text', 'Customer Login')
     signInPage.getEmail().type(email)
     signInPage.getPassword().type(password)
     signInPage.getSignInBtn().click()
-    //Haven't gotten a way to bypass the captcha
+    signInPage.getErrMessage().should('be.visible').and('contain.text', signInErrMessage)
   })
 })
+//Remember to find a way to bypass captcha

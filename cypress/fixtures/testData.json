@@ -14,5 +14,8 @@
   "customerCredentials": {
     "email": "roni_cost@example.com",
     "password": "roni_cost3@example.com"
+  },
+  "signIn": {
+    "err": "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."
   }
 }
